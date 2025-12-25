@@ -1,0 +1,34 @@
+{% comment %}
+  Renders a cart drawer
+
+  Usage:
+  {% render 'misc.cart-drawer' %}
+{% endcomment %}
+
+<div ui-slot="sheet" class="cart">
+  <button
+    ui-slot="button"
+    data-variant="neutral"
+    data-mode="stroke"
+    data-size="md"
+    data-as-icon
+    aria-label="Cart"
+    popovertarget="cart"
+  >
+    <i class="hgi hgi-stroke hgi-shopping-basket-03"></i>
+  </button>
+  <div ui-slot="sheet-content" id="cart" popover>
+    <div ui-slot="sheet-header">
+      <h2 ui-slot="sheet-title">My Cart</h2>
+    </div>
+    <div ui-slot="sheet-body">
+      {% render 'misc.empty', heading: 'Your cart is empty (;-;)', subheading: 'Your cart is empty (;-;)' %}
+    </div>
+    <div ui-slot="sheet-footer">
+      <button ui-slot="button" data-variant="neutral" data-mode="stroke" data-size="lg" popovertarget="cart">
+        Continue Shopping
+      </button>
+      <a href="/cart" ui-slot="button" data-variant="primary" data-mode="filled" data-size="lg">Go to Cart</a>
+    </div>
+  </div>
+</div>

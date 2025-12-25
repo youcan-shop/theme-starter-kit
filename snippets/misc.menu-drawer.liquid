@@ -1,0 +1,27 @@
+{% comment %}
+  Renders a menu drawer
+
+  Usage:
+  {% render 'misc.menu-drawer' %}
+{% endcomment %}
+
+<div ui-slot="drawer" class="menu">
+  <button
+    ui-slot="button"
+    data-variant="neutral"
+    data-mode="stroke"
+    data-size="md"
+    data-as-icon
+    aria-label="Menu"
+    popovertarget="menu"
+  >
+    <i class="hgi hgi-stroke hgi-menu-03"></i>
+  </button>
+  <div ui-slot="drawer-content" id="menu" popover>
+    <div ui-slot="drawer-header">
+      <h2 ui-slot="drawer-title">My Menu</h2>
+    </div>
+    <div ui-slot="drawer-body"></div>
+    <div ui-slot="drawer-footer"></div>
+  </div>
+</div>
