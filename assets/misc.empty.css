@@ -1,0 +1,15 @@
+ui-empty {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  text-align: center;
+}
+ui-empty .heading {
+  font: var(--font-body-md);
+}
+ui-empty .subheading {
+  color: var(--color-on-surface-variant);
+  font: var(--font-body-sm);
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy50ZW1wL21pc2MuZW1wdHkuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBIiwiZmlsZSI6Im1pc2MuZW1wdHkuY3NzIiwic291cmNlc0NvbnRlbnQiOlsidWktZW1wdHkge1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICBnYXA6IHZhcigtLXNwYWNpbmctNCk7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cbnVpLWVtcHR5IC5oZWFkaW5nIHtcbiAgZm9udDogdmFyKC0tZm9udC1ib2R5LW1kKTtcbn1cbnVpLWVtcHR5IC5zdWJoZWFkaW5nIHtcbiAgY29sb3I6IHZhcigtLWNvbG9yLW9uLXN1cmZhY2UtdmFyaWFudCk7XG4gIGZvbnQ6IHZhcigtLWZvbnQtYm9keS1zbSk7XG59XG4iXX0= */
