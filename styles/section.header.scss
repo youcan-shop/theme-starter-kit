@@ -1,0 +1,28 @@
+[ui-layout="header"] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-24) 8%;
+
+  .links {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-12);
+  }
+}
+
+@media (width > 769px) {
+  [ui-layout="header"] {
+    .menu {
+      display: none;
+    }
+  }
+}
+
+@media (width <= 769px) {
+  [ui-layout="header"] {
+    .links {
+      display: none;
+    }
+  }
+}

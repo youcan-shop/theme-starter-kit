@@ -1,4 +1,56 @@
-<div>Header</div>
+{{ 'section.header.css' | asset_url | stylesheet_tag }}
+
+<div ui-layout="header">
+  <ul class="links">
+    {% for link in main-link-list.links %}
+      <li class="link">
+        <a ui-slot="link-button" data-variant="black" data-size="md" href="{{ link.url }}">
+          {{ link.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+  <div ui-slot="drawer" class="menu">
+    <button
+      ui-slot="button"
+      data-variant="neutral"
+      data-mode="stroke"
+      data-size="md"
+      data-as-icon
+      aria-label="Menu"
+      popovertarget="menu"
+    >
+      <i class="hgi hgi-stroke hgi-menu-03"></i>
+    </button>
+    <div ui-slot="drawer-content" id="menu" popover>
+      <div ui-slot="drawer-header">
+        <h2 ui-slot="drawer-title">My Menu</h2>
+      </div>
+      <div ui-slot="drawer-body"></div>
+      <div ui-slot="drawer-footer"></div>
+    </div>
+  </div>
+  <div ui-slot="sheet" class="actions">
+    <button
+      ui-slot="button"
+      data-variant="neutral"
+      data-mode="stroke"
+      data-size="md"
+      data-as-icon
+      aria-label="Cart"
+      popovertarget="cart"
+    >
+      <i class="hgi hgi-stroke hgi-shopping-basket-03"></i>
+    </button>
+    <div ui-slot="sheet-content" id="cart" popover>
+      <div ui-slot="sheet-header">
+        <h2 ui-slot="sheet-title">My Cart</h2>
+      </div>
+      <div ui-slot="sheet-body"></div>
+      <div ui-slot="sheet-footer"></div>
+    </div>
+  </div>
+</div>
 
 {% schema %}
 {

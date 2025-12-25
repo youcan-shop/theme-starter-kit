@@ -1,8 +1,22 @@
-<div>Footer</div>
+{{ 'section.footer.css' | asset_url | stylesheet_tag }}
 
+<div ui-layout="footer">
+  © Made By
+  <a
+    ui-slot="link-button"
+    data-variant="black"
+    data-size="md"
+    data-underline="true"
+    href="https://youcan.shop"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    YouCan
+  </a>
+</div>
 {% schema %}
 {
-  "label": "Header",
+  "label": "Footer",
   "tag": "footer",
   "settings": []
 }
