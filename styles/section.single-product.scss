@@ -42,3 +42,23 @@
     }
   }
 }
+
+@media (width <= 769px) {
+  [ui-section="single-product"] {
+    grid-template-columns: 1fr;
+
+    .media {
+      height: 45vh;
+    }
+
+    .content {
+      .title {
+        font: var(--font-headline-sm);
+      }
+
+      .price {
+        font: var(--font-title-md);
+      }
+    }
+  }
+}
