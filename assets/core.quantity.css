@@ -1,0 +1,11 @@
+ui-quantity {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-6);
+}
+ui-quantity .value {
+  min-width: 35px;
+  text-align: center;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy50ZW1wL2NvcmUucXVhbnRpdHkuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBIiwiZmlsZSI6ImNvcmUucXVhbnRpdHkuY3NzIiwic291cmNlc0NvbnRlbnQiOlsidWktcXVhbnRpdHkge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBnYXA6IHZhcigtLXNwYWNpbmctNik7XG59XG51aS1xdWFudGl0eSAudmFsdWUge1xuICBtaW4td2lkdGg6IDM1cHg7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cbiJdfQ== */
