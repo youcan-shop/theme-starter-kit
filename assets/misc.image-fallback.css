@@ -1,0 +1,13 @@
+ui-image-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-surface-container-low);
+}
+ui-image-fallback > i {
+  color: var(--color-on-surface-variant);
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy50ZW1wL21pc2MuaW1hZ2UtZmFsbGJhY2suY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBIiwiZmlsZSI6Im1pc2MuaW1hZ2UtZmFsbGJhY2suY3NzIiwic291cmNlc0NvbnRlbnQiOlsidWktaW1hZ2UtZmFsbGJhY2sge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMTAwJTtcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tY29sb3Itc3VyZmFjZS1jb250YWluZXItbG93KTtcbn1cbnVpLWltYWdlLWZhbGxiYWNrID4gaSB7XG4gIGNvbG9yOiB2YXIoLS1jb2xvci1vbi1zdXJmYWNlLXZhcmlhbnQpO1xufVxuIl19 */
