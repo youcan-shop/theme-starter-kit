@@ -1,0 +1,5 @@
+ui-product-button {
+  & > [ui-slot="button"] {
+    width: 100%;
+  }
+}

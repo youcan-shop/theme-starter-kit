@@ -40,20 +40,23 @@
       </div>
     </div>
     {% render 'const.inventory-status', count: default_variant.inventory, threshold: 10 %}
+
     {% if product.options.size > 0 %}
       {% render 'core.variants' %}
     {% endif %}
 
-    {% comment %}
-      {% if settings.checkout_type == 'express' %}
-        {% render 'core-express-checkout' %}
-      {% endif %}
-    {% endcomment %}
     {% if product.description %}
       <div class="general-info">
         <article>{{ product.description }}</article>
       </div>
     {% endif %}
+
+    {% render 'core.express-checkout' %}
+
+    <div class="controller">
+      {% render 'core.quantity' %}
+      {% render 'core.shop-button' %}
+    </div>
   </div>
 </div>
 

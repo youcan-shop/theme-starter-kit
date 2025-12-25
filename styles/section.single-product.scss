@@ -36,6 +36,15 @@
       }
     }
 
+    .controller {
+      display: flex;
+      gap: var(--spacing-12);
+
+      & > *:last-child {
+        width: 100%;
+      }
+    }
+
     img,
     iframe {
       max-width: 100%;

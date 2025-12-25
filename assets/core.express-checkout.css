@@ -1,0 +1,14 @@
+ui-express-checkout {
+  display: grid;
+  gap: var(--spacing-12);
+}
+ui-express-checkout ui-linked-fields {
+  display: grid;
+  gap: var(--spacing-12);
+}
+ui-express-checkout [ui-express-checkout=field] {
+  display: grid;
+  gap: var(--spacing-8);
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy50ZW1wL2NvcmUuZXhwcmVzcy1jaGVja291dC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEiLCJmaWxlIjoiY29yZS5leHByZXNzLWNoZWNrb3V0LmNzcyIsInNvdXJjZXNDb250ZW50IjpbInVpLWV4cHJlc3MtY2hlY2tvdXQge1xuICBkaXNwbGF5OiBncmlkO1xuICBnYXA6IHZhcigtLXNwYWNpbmctMTIpO1xufVxudWktZXhwcmVzcy1jaGVja291dCB1aS1saW5rZWQtZmllbGRzIHtcbiAgZGlzcGxheTogZ3JpZDtcbiAgZ2FwOiB2YXIoLS1zcGFjaW5nLTEyKTtcbn1cbnVpLWV4cHJlc3MtY2hlY2tvdXQgW3VpLWV4cHJlc3MtY2hlY2tvdXQ9ZmllbGRdIHtcbiAgZGlzcGxheTogZ3JpZDtcbiAgZ2FwOiB2YXIoLS1zcGFjaW5nLTgpO1xufVxuIl19 */

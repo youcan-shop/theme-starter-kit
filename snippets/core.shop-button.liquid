@@ -1,0 +1,56 @@
+{{ 'core.shop-button.css' | asset_url | stylesheet_tag }}
+
+{% comment %}
+  Renders a shop button
+
+  Accepts:
+  - product: {Object} Product info
+  - as_icon: {Boolean} (Optional) Button style
+  - is_express_checkout: {Boolean} (Optional) Checkout type (express checkout)
+
+  Usage:
+  {% render 'core-product-button', product: {...}, as_icon: false %}
+{% endcomment %}
+
+{% assign default_variant = product.selected_or_first_available_variant %}
+
+<ui-product-button
+  quantity="1"
+  variant-id="{{ default_variant.id }}"
+  {% unless product.available %}
+    not-available
+  {% endunless %}
+  {% if product.skip_to_checkout %}
+    skip-cart
+  {% endif %}
+  {% if source %}
+    source="{{ source }}"
+  {% endif %}
+  {% if is_express_checkout %}
+    checkout-type="express"
+  {% endif %}
+>
+  {% if is_express_checkout %}
+    <button ui-slot="button" data-variant="primary" data-mode="filled" data-size="lg" class="add-to-cart">
+      {% render 'misc.icon', name: 'hgi-shopping-basket-01' %}
+      {{ 'product.buy_button.express_checkout.place_order' | t }}
+    </button>
+  {% elsif product.skip_to_checkout %}
+    <button ui-slot="button" data-variant="primary" data-mode="filled" data-size="lg" class="add-to-cart">
+      {% render 'misc.icon', name: 'hgi-shopping-basket-01' %}
+      {{ 'general.shop_now' | t }}
+    </button>
+  {% else %}
+    <button
+      ui-slot="button"
+      data-variant="primary"
+      data-mode="filled"
+      data-size="lg"
+      class="add-to-cart"
+      aria-label="{{ 'general.add_to_cart' | t }}"
+    >
+      {% render 'misc.icon', name: 'hgi-add-01' %}
+      <span class="label">{{ 'general.add_to_cart' | t }}</span>
+    </button>
+  {% endif %}
+</ui-product-button>
