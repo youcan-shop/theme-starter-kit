@@ -1,0 +1,5 @@
+ui-search[ui-slot=modal] [ui-slot=modal-content][popover] {
+  border-radius: var(--radius-md);
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy50ZW1wL21pc2Muc2VhcmNoLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSIsImZpbGUiOiJtaXNjLnNlYXJjaC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJ1aS1zZWFyY2hbdWktc2xvdD1tb2RhbF0gW3VpLXNsb3Q9bW9kYWwtY29udGVudF1bcG9wb3Zlcl0ge1xuICBib3JkZXItcmFkaXVzOiB2YXIoLS1yYWRpdXMtbWQpO1xufVxuIl19 */

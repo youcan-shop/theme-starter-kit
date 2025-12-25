@@ -11,7 +11,10 @@
     {% endfor %}
   </ul>
   {% render 'misc.menu-drawer' %}
-  {% render 'misc.cart-drawer' %}
+  <div class="actions">
+    {% render 'misc.search' %}
+    {% render 'misc.cart-drawer' %}
+  </div>
 </div>
 
 {% schema %}

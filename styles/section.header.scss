@@ -9,6 +9,11 @@
     align-items: center;
     gap: var(--spacing-12);
   }
+
+  .actions {
+    display: flex;
+    gap: var(--spacing-12);
+  }
 }
 
 @media (width > 769px) {
