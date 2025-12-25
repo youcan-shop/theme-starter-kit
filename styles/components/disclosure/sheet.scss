@@ -18,7 +18,7 @@
     inset-inline-end: calc(var(--sheet-width) * -1);
     flex-direction: column;
     justify-content: space-between;
-    max-width: var(--sheet-width);
+    width: var(--sheet-width);
     height: 100dvh;
     transition: var(--transition-expressive-default-spatial);
     border: none;
@@ -77,5 +77,11 @@
         }
       }
     }
+  }
+}
+
+@media (width <= 769px) {
+  [ui-slot="sheet"] {
+    --sheet-width: 100%;
   }
 }
