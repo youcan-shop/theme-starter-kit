@@ -1,0 +1,44 @@
+[ui-section="single-product"] {
+  display: grid;
+  grid-template-columns: 50% auto;
+  padding-inline: 8%;
+  gap: var(--spacing-24);
+
+  .media {
+    height: 60vh;
+    overflow: hidden;
+    border: 1px solid var(--color-surface-variant);
+    border-radius: var(--radius-lg);
+
+    [ui-slot="carousel"] {
+      height: 100%;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-16);
+
+    .title {
+      font: var(--font-headline-lg);
+    }
+
+    .price {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-8);
+      font: var(--font-title-lg);
+
+      .compare-at-price {
+        color: var(--color-on-surface-variant);
+        text-decoration: line-through;
+      }
+    }
+
+    img,
+    iframe {
+      max-width: 100%;
+    }
+  }
+}

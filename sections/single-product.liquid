@@ -1,4 +1,61 @@
-Single Product
+{{ 'section.single-product.css' | asset_url | stylesheet_tag }}
+
+{% assign default_variant = product.selected_or_first_available_variant %}
+{% assign price = default_variant.price | default: product.price %}
+{% assign compare_at_price = default_variant.compare_at_price | default: product.compare_at_price %}
+
+<div ui-section="single-product">
+  <div class="media">
+    <div ui-slot="carousel" aria-orientation="vertical" data-align="center" style="--per-page: 1;">
+      {% if product.images.size %}
+        {% for image in product.images %}
+          <div ui-slot="carousel-item">
+            <img
+              src="{{ image }}"
+              alt="{{ product.name }}"
+              height="100%"
+              width="100%"
+            >
+          </div>
+        {% endfor %}
+      {% else %}
+        {% render 'misc.image-fallback', size: 60 %}
+      {% endif %}
+    </div>
+  </div>
+  <div class="content">
+    <h1 class="title">{{ product.name }}</h1>
+    <div class="price">
+      <span class="original-price" ui-product-item="price">
+        {{ price | default: 0 | money }}
+      </span>
+      <div
+        class="compare-at-price"
+        ui-product-item="compare-at-price"
+        {% unless compare_at_price %}
+          hidden
+        {% endunless %}
+      >
+        {{ compare_at_price | default: 0 | money }}
+      </div>
+    </div>
+    {% render 'const.inventory-status', count: default_variant.inventory, threshold: 10 %}
+    {% if product.options.size > 0 %}
+      {% render 'core.variants' %}
+    {% endif %}
+
+    {% comment %}
+      {% if settings.checkout_type == 'express' %}
+        {% render 'core-express-checkout' %}
+      {% endif %}
+    {% endcomment %}
+    {% if product.description %}
+      <div class="general-info">
+        <article>{{ product.description }}</article>
+      </div>
+    {% endif %}
+  </div>
+</div>
 
 {% schema %}
 {

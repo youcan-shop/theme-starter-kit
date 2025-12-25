@@ -24,7 +24,7 @@
   -ms-overflow-style: none;
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
-  gap: var(--gap);
+  gap: var(--gap, 0);
 
   /* Item */
   [ui-slot="carousel-item"] {
@@ -46,7 +46,7 @@
 
     [ui-slot="carousel-item"] {
       min-width: calc(
-        (var(--item-size, 100%) - (var(--gap) * (var(--per-page) - 1))) /
+        (var(--item-size, 100%) - (var(--gap, 0px) * (var(--per-page) - 1))) /
           var(--per-page)
       );
     }
@@ -59,7 +59,7 @@
 
     [ui-slot="carousel-item"] {
       min-height: calc(
-        (var(--item-size, 100%) - (var(--gap) * (var(--per-page) - 1))) /
+        (var(--item-size, 100%) - (var(--gap, 0px) * (var(--per-page) - 1))) /
           var(--per-page)
       );
     }
