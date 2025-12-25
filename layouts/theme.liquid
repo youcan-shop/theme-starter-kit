@@ -1,0 +1,46 @@
+<!doctype html>
+{% assign lang = store.store_locale.iso_code %}
+{% assign direction = 'ltr' %}
+
+{% if lang == 'ar' %}
+  {% assign direction = 'rtl' %}
+{% endif %}
+
+<html lang="{{ lang }}" dir="{{ direction }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="{{ request.url }}">
+
+    {% comment %} Icons {% endcomment %}
+    <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+
+    {% comment %} Font {% endcomment %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    >
+
+    {% comment %} YouCan API {% endcomment %}
+    <script src="https://unpkg.com/@youcan/js@latest/dist/index.umd.js" defer></script>
+
+    {{ content_for_header }}
+
+    {% comment %} Styles {% endcomment %}
+    {{ 'main.css' | asset_url | stylesheet_tag }}
+  </head>
+
+  <body>
+    <div id="app">
+      {% section 'header' %}
+
+      <main id="main">
+        {{ content_for_layout }}
+      </main>
+
+      {% section 'footer' %}
+    </div>
+  </body>
+</html>
