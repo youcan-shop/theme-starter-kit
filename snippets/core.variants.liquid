@@ -72,11 +72,11 @@
         </div>
       {% elsif variant.type == 'dropdown' %}
         <div ui-slot="select" data-size="md">
-          <button ui-slot="select-trigger" popovertarget="my-select">Select</button>
+          <button ui-slot="select-trigger" popovertarget="{{ unique_name }}" type="button">Select</button>
 
-          <div ui-slot="select-content" id="my-select" popover>
+          <div ui-slot="select-content" id="{{ unique_name }}" popover>
             {% for opt in variant.values %}
-              <button ui-slot="select-option" popovertarget="my-select">
+              <button ui-slot="select-option" popovertarget="{{ unique_name }}" type="button">
                 <label>
                   <input
                     type="radio"
