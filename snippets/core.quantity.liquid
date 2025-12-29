@@ -5,6 +5,7 @@
 
   Accepts:
   - product: {Object} Cart item liquid object
+  - size: {Object} (Optional) Button controls size (lg, md, sm, xs)
 
   Usage:
   {% render 'core.quantity' product: {...}, size: 'sm' %}
@@ -19,17 +20,17 @@
 <ui-quantity
   class="quantity"
   item="{{ product.id }}"
+  product-variant="{{ product.product_variant_id }}"
   quantity="{{ quantity }}"
   {% if product.inventory %}
     inventory="{{ product.inventory }}"
   {% endif %}
-  product-variant="{{ product.product_variant_id }}"
 >
   <button
     ui-slot="button"
     data-variant="neutral"
     data-mode="stroke"
-    data-size="lg"
+    data-size="{{ size | default: "lg" }}"
     data-as-icon
     name="minus"
     aria-label="decrease"
@@ -37,14 +38,14 @@
   >
     {% render 'misc.icon', name: 'hgi-remove-01' %}
   </button>
-  <span ui-quantity-value class="value" ui-cart-item="quantity">
+  <span ui-quantity="value" class="value" ui-cart-item="quantity">
     {{ quantity }}
   </span>
   <button
     ui-slot="button"
     data-variant="neutral"
     data-mode="stroke"
-    data-size="lg"
+    data-size="{{ size | default: "lg" }}"
     data-as-icon
     name="plus"
     aria-label="increase"
