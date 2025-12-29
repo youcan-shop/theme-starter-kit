@@ -1,4 +1,4 @@
-{{ 'core.shop-button.css' | asset_url | stylesheet_tag }}
+{% comment %} {{ 'core.shop-button.css' | asset_url | stylesheet_tag }} {% endcomment %}
 
 {% comment %}
   Renders a shop button
@@ -14,7 +14,7 @@
 
 {% assign default_variant = product.selected_or_first_available_variant %}
 
-<ui-product-button
+<ui-shop-button
   quantity="1"
   variant-id="{{ default_variant.id }}"
   {% unless product.available %}
@@ -33,12 +33,12 @@
   {% if is_express_checkout %}
     <button ui-slot="button" data-variant="primary" data-mode="filled" data-size="lg" class="add-to-cart">
       {% render 'misc.icon', name: 'hgi-shopping-basket-01' %}
-      {{ 'product.buy_button.express_checkout.place_order' | t }}
+      <span>{{ 'product.buy_button.express_checkout.place_order' | t }}</span>
     </button>
   {% elsif product.skip_to_checkout %}
     <button ui-slot="button" data-variant="primary" data-mode="filled" data-size="lg" class="add-to-cart">
       {% render 'misc.icon', name: 'hgi-shopping-basket-01' %}
-      {{ 'general.shop_now' | t }}
+      <span>{{ 'general.shop_now' | t }}</span>
     </button>
   {% else %}
     <button
@@ -53,4 +53,4 @@
       <span class="label">{{ 'general.add_to_cart' | t }}</span>
     </button>
   {% endif %}
-</ui-product-button>
+</ui-shop-button>
