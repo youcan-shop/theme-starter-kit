@@ -1,4 +1,4 @@
-{% comment %} {{ 'misc.linked-fields.js' | asset_url | script_tag_deferred }} {% endcomment %}
+{{ 'core.linked-fields.js' | asset_url | script_tag_deferred }}
 
 {% comment %}
   Renders a list of linked fields, typically "country", "region", and "city" (optional)
@@ -17,9 +17,8 @@
     {% if linked_fields contains field.name %}
       <label ui-express-checkout="field">
         <span ui-slot="label">{{ field.display_name }}</span>
-        <div ui-slot="select" data-size="md">
-          <button ui-slot="select-trigger" popovertarget="{{ field.name }}">Select</button>
-
+        <div ui-slot="select" data-size="lg">
+          <button ui-slot="select-trigger" popovertarget="{{ field.name }}" type="button">Select</button>
           <div ui-slot="select-content" id="{{ field.name }}" popover></div>
         </div>
       </label>
