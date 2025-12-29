@@ -1,1 +1,1 @@
-# 6th Theme (Gen Z)
+# YouCan Theme Starter Kit

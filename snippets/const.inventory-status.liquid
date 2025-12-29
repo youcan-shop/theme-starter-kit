@@ -4,6 +4,7 @@
   Accepts:
   - count: {Number} Inventory number
   - threshold: {Number} Inventory threshold
+  - show_count: {Boolean} Toggle inventory count visibility
 
   Usage:
   {% render 'const.inventory-status', count: 10, threshold: 24 %}
@@ -21,13 +22,24 @@
   {% endif %}
   data-product-item="inventory"
   data-threshold="{{ threshold }}"
+  data-show-count="{{ show_count }}"
 >
   <span ui-slot="badge-dot"></span>
-  {% if count == 0 or count == null %}
-    {{ 'product.inventory_out_of_stock' | t }}
-  {% elsif count > threshold %}
-    {{ 'product.inventory_in_stock_show_count' | t | replace: '%', count }}
-  {% else %}
-    {{ 'product.inventory_low_stock_show_count' | t | replace: '%', count }}
-  {% endif %}
+  <span class="value">
+    {% if count == 0 %}
+      {{ 'product.inventory_out_of_stock' | t }}
+    {% elsif count > threshold %}
+      {% if show_count %}
+        {{ 'product.inventory_in_stock_show_count' | t | replace: '%', count }}
+      {% else %}
+        {{ 'product.inventory_in_stock' | t }}
+      {% endif %}
+    {% else %}
+      {% if show_count %}
+        {{ 'product.inventory_low_stock_show_count' | t | replace: '%', count }}
+      {% else %}
+        {{ 'product.inventory_low_stock' | t }}
+      {% endif %}
+    {% endif %}
+  </span>
 </div>

@@ -28,7 +28,7 @@
           {% when 'text', 'number', 'hidden' %}
             <input
               ui-slot="input"
-              data-size="md"
+              data-size="lg"
               type="{{ field.type }}"
               name="{{ field_name }}"
               value="{{ field.default_value }}"
@@ -47,12 +47,12 @@
               {% endif %}
             ></textarea>
           {% when 'select' %}
-            <div ui-slot="select" data-size="md">
-              <button ui-slot="select-trigger" popovertarget="{{ field_name }}">Select</button>
+            <div ui-slot="select" data-size="lg">
+              <button ui-slot="select-trigger" popovertarget="{{ field_name }}" type="button">Select</button>
 
               <div ui-slot="select-content" id="{{ field_name }}" popover>
                 {% for opt in field.options %}
-                  <button ui-slot="select-option" popovertarget="{{ field_name }}">
+                  <button ui-slot="select-option" popovertarget="{{ field_name }}" type="button">
                     <label>
                       <input
                         type="radio"

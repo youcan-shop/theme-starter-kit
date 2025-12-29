@@ -167,10 +167,36 @@
 
   /* Disabled */
   &:disabled,
+  &[data-loading],
   &[aria-disabled="true"] {
     border-color: transparent;
     background-color: var(--color-surface-container);
     color: color-mix(in srgb, var(--color-on-surface) 38%, transparent);
     pointer-events: none;
+  }
+
+  /* Loading */
+  &[data-loading] {
+    position: relative;
+    overflow: hidden;
+    color: transparent;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      animation: spin 1s linear infinite;
+      border: 1.5px solid
+        color-mix(in srgb, var(--color-on-surface) 38%, transparent);
+      border-radius: var(--radius-circled);
+      border-inline-end-color: transparent;
+    }
+  }
+}
+
+@keyframes spin {
+  to {
+    rotate: 360deg;
   }
 }

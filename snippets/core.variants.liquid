@@ -58,7 +58,7 @@
         <div class="options">
           {% for opt in variant.values %}
             <label class="opt" style="--color-value: {{ opt.preview }}">
-              <i class="hgi hgi-stroke hgi-tick-02"></i>
+              {% render 'misc.icon', name: 'hgi-tick-02', size: 20 %}
               <input
                 type="radio"
                 name="{{ unique_name }}"
@@ -120,6 +120,19 @@
             </label>
           {% endfor %}
         </div>
+      {% elsif variant.type == 'upload_image_zone' %}
+        <label ui-slot="file-upload">
+          <input type="file" name="{{ unique_name }}" accept="image/png, image/gif, image/jpg, image/jpeg, image/webp">
+
+          <div ui-slot="file-upload-icon">
+            <i class="hgi hgi-stroke hgi-cloud-upload"></i>
+          </div>
+          <div ui-slot="file-upload-content">
+            <h4 ui-slot="file-upload-label">{{ 'product.upload_image.label' | t }}</h4>
+            <p ui-slot="file-upload-description">{{ 'product.upload_image.accept' | t }}</p>
+          </div>
+          <div ui-slot="file-upload-button">Browse File</div>
+        </label>
       {% endif %}
     </div>
   {% endfor %}

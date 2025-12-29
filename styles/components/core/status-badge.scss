@@ -71,10 +71,10 @@
   }
 
   &[data-status="completed"] {
-    --color-status-badge: #0b6d36;
-    --color-on-status-badge: #fff;
-    --color-status-badge-container: #9ef6b0;
-    --color-on-status-badge-container: #00210b;
+    --color-status-badge: var(--color-success);
+    --color-on-status-badge: var(--color-on-success);
+    --color-status-badge-container: var(--color-success-container);
+    --color-on-status-badge-container: var(--color-on-success-container);
   }
 
   &[data-status="failed"] {
@@ -82,5 +82,12 @@
     --color-on-status-badge: var(--color-on-error);
     --color-status-badge-container: var(--color-error-container);
     --color-on-status-badge-container: var(--color-on-error-container);
+  }
+
+  &[data-status="pending"] {
+    --color-status-badge: var(--color-warning);
+    --color-on-status-badge: var(--color-on-warning);
+    --color-status-badge-container: var(--color-warning-container);
+    --color-on-status-badge-container: var(--color-on-warning-container);
   }
 }
