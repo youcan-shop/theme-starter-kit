@@ -1,10 +1,11 @@
 {{ 'section.single-product.css' | asset_url | stylesheet_tag }}
+{{ 'section.product.js' | asset_url | script_tag_deferred }}
 
 {% assign default_variant = product.selected_or_first_available_variant %}
 {% assign price = default_variant.price | default: product.price %}
 {% assign compare_at_price = default_variant.compare_at_price | default: product.compare_at_price %}
 
-<div ui-section="single-product">
+<ui-product ui-section="single-product" product-id="{{ product.id }}">
   <div class="media">
     <div ui-slot="carousel" aria-orientation="vertical" data-align="center" style="--per-page: 1;">
       {% if product.images.size %}
@@ -23,7 +24,7 @@
       {% endif %}
     </div>
   </div>
-  <div class="content">
+  <form class="content" ui-order-form>
     <h1 class="title">{{ product.name }}</h1>
     <div class="price">
       <span class="original-price" ui-product-item="price">
@@ -39,7 +40,7 @@
         {{ compare_at_price | default: 0 | money }}
       </div>
     </div>
-    {% render 'const.inventory-status', count: default_variant.inventory, threshold: 10 %}
+    {% render 'const.inventory-status', count: default_variant.inventory, threshold: 10, show_count: true %}
 
     {% if product.options.size > 0 %}
       {% render 'core.variants' %}
@@ -55,10 +56,18 @@
 
     <div class="controller">
       {% render 'core.quantity' %}
-      {% render 'core.shop-button' %}
+      {% render 'core.shop-button', is_express_checkout: true %}
     </div>
-  </div>
-</div>
+  </form>
+</ui-product>
+
+{% if product and product.options.size %}
+  {% javascript %}
+    if (!window.productsVariants["{{ product.id }}"]) {
+      window.productsVariants["{{ product.id }}"] = JSON.parse({{ product.variants | json }});
+    }
+  {% endjavascript %}
+{% endif %}
 
 {% schema %}
 {
