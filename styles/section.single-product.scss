@@ -1,7 +1,6 @@
 [ui-section="single-product"] {
   display: grid;
   grid-template-columns: 50% auto;
-  padding-inline: 8%;
   gap: var(--spacing-24);
 
   .media {

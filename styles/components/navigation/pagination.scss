@@ -21,7 +21,7 @@
 
 [ui-slot="pagination"] {
   display: flex;
-  width: fit-content;
+  justify-content: center;
 
   /* Variant */
   &[data-variant="basic"],

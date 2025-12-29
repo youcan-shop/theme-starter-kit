@@ -53,11 +53,13 @@ if (!customElements.get("ui-shop-button")) {
 
     handleAvailabilityChange() {
       this.buyButton.disabled = this.hasAttribute("not-available");
-      this.buyButton.lastElementChild.textContent = this.hasAttribute(
-        "not-available"
-      )
-        ? "Out of stoke"
-        : this.buyButtonLabel;
+      const label = this.buyButton.querySelector("span");
+
+      if (label) {
+        label.textContent = this.hasAttribute("not-available")
+          ? "Out of stoke"
+          : this.buyButtonLabel;
+      }
     }
 
     onBuyClicked(event) {

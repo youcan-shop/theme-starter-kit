@@ -26,6 +26,8 @@
 
 @media (width <= 769px) {
   [ui-layout="header"] {
+    padding-inline: var(--spacing-24);
+
     .links {
       display: none;
     }
