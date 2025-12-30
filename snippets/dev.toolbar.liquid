@@ -1,0 +1,132 @@
+{{ 'dev.toolbar.css' | asset_url | stylesheet_tag }}
+
+{% comment %}
+  Renders a dev toolbar
+
+  Usage:
+  {% render 'dev.toolbar' %}
+{% endcomment %}
+
+<ui-dev-toolbar ui-slot="modal">
+  <div ui-slot="button-group" data-size="sm" role="group" class="toolbar" data-theme="dark">
+    <button ui-slot="button-group-item" role="radio" aria-checked="false">
+      {% render 'misc.icon', name: 'hgi-cursor-rectangle-selection-02' %} Highlighter
+    </button>
+    <button ui-slot="button-group-item" role="radio" aria-checked="false" popovertarget="dev-tool">
+      {% render 'misc.icon', name: 'hgi-settings-03' %} Settings
+    </button>
+  </div>
+
+  <div ui-slot="modal-content" id="dev-tool" popover>
+    <div ui-slot="modal-header">
+      <div ui-slot="modal-icon">
+        {% render 'misc.icon', name: 'hgi-settings-03' %}
+      </div>
+      <div>
+        <h2 ui-slot="modal-title">Settings</h2>
+        <p ui-slot="modal-description">Choose contact preferences for companies.</p>
+      </div>
+      <button
+        ui-slot="compact-button"
+        data-variant="ghost"
+        data-size="lg"
+        aria-label="Close"
+        popovertarget="dev-tool"
+      >
+        {% render 'misc.icon', name: 'hgi-cancel-01' %}
+      </button>
+    </div>
+    <div ui-slot="modal-body">
+      <fieldset>
+        <label ui-slot="label">Theme</label>
+        <div class="theme-options">
+          <label class="theme">
+            <div class="icon">
+              <span>Aa</span>
+            </div>
+            <p class="label">Light</p>
+            <input type="radio" name="theme" value="light">
+          </label>
+          <label class="theme">
+            <div class="icon">
+              <span>Aa</span>
+            </div>
+            <p class="label">Dark</p>
+            <input type="radio" name="theme" value="dark">
+          </label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <label ui-slot="label" for="font">Front Family</label>
+        <div ui-slot="select" data-size="sm">
+          <button ui-slot="select-trigger" popovertarget="font">Select a font</button>
+
+          <div ui-slot="select-content" id="lang" popover>
+            <button ui-slot="select-option" popovertarget="font">
+              <label>
+                <input type="radio" name="font-family" value="en">
+                DM Sans
+              </label>
+            </button>
+            <button ui-slot="select-option" popovertarget="font">
+              <label>
+                <input type="radio" name="font-family" value="fr">
+                Inter
+              </label>
+            </button>
+            <button ui-slot="select-option" popovertarget="font">
+              <label>
+                <input type="radio" name="font-family" value="ar">
+                Poppins
+              </label>
+            </button>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <label ui-slot="label" for="language">Langues</label>
+        <div ui-slot="select" data-size="sm">
+          <button ui-slot="select-trigger" popovertarget="lang">Select a language</button>
+
+          <div ui-slot="select-content" id="lang" popover>
+            <button ui-slot="select-option" popovertarget="lang">
+              <label>
+                <input type="radio" name="language" value="en">
+                English
+              </label>
+            </button>
+            <button ui-slot="select-option" popovertarget="lang">
+              <label>
+                <input type="radio" name="language" value="fr">
+                French
+              </label>
+            </button>
+            <button ui-slot="select-option" popovertarget="lang">
+              <label>
+                <input type="radio" name="language" value="ar">
+                Arabic
+              </label>
+            </button>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <label ui-slot="label">Brand Color</label>
+        <div class="color-options">
+          <label class="color">
+            <input type="radio" name="brand-color" value="green">
+          </label>
+          <label class="color">
+            <input type="radio" name="brand-color" value="blue">
+          </label>
+          <label class="color">
+            <input type="radio" name="brand-color" value="orange">
+          </label>
+          <label class="color">
+            <input type="radio" name="brand-color" value="red">
+          </label>
+        </div>
+      </fieldset>
+    </div>
+  </div>
+</ui-dev-toolbar>
