@@ -21,7 +21,16 @@
     <div ui-slot="drawer-header">
       <h2 ui-slot="drawer-title">My Menu</h2>
     </div>
-    <div ui-slot="drawer-body"></div>
-    <div ui-slot="drawer-footer"></div>
+    <div ui-slot="drawer-body">
+      <ul class="sm-links">
+        {% for link in main-link-list.links %}
+          <li class="link">
+            <a ui-slot="button" data-variant="neutral" data-mode="ghost" data-size="lg" href="{{ link.url }}">
+              {{ link.title }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
   </div>
 </div>
