@@ -19,7 +19,7 @@
 
     {% else %}
       {% assign empty_content = 'search.empty.title' | t %}
-      {% render 'misc.empty', content: empty_content %}
+      {% render 'misc.empty', heading: empty_content %}
     {% endif %}
   {% endpaginate %}
 </div>

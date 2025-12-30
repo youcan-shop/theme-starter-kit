@@ -319,7 +319,7 @@ class CartItems extends BaseCartItem {
 
   setIsEmpty(isEmpty = false) {
     this.parentElement
-      .querySelector("[ui-empty]")
+      .querySelector("ui-empty")
       .toggleAttribute("hidden", !isEmpty);
     this.parentElement
       .querySelector("ui-summary-box")
