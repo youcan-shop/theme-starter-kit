@@ -20,10 +20,10 @@
     {% render 'misc.icon', name: 'hgi-search-01' %}
   </button>
   <div ui-slot="modal-content" id="search" popover>
-    <form>
+    <form action="/search">
       <fieldset ui-slot="input-wrapper" data-size="lg" role="group">
         <i ui-slot="input-icon" class="hgi hgi-stroke hgi-search-01"></i>
-        <input ui-slot="input" name="search" type="text" placeholder="Search products..">
+        <input ui-slot="input" name="q" type="text" placeholder="Search products..">
         <button ui-slot="input-button">Search</button>
       </fieldset>
     </form>
