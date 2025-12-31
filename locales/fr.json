@@ -1,34 +1,9 @@
 {
   "general": {
-    "all": "Tous",
-    "buy_now": "Acheter maintenant",
     "shop_now": "Commander maintenant",
     "add_to_cart": "Ajouter au panier",
     "out_of_stock": "En rupture de stock",
-    "show_more": "Voir plus",
-    "show_all_button": "Voir tout",
-    "choose_options": "Choisir les options",
-    "choose_image": "Clique pour sélectionner une image",
-    "search": "Recherche..",
-    "select": "sélectionner",
-    "no-results": "Aucun résultat trouvé.",
-    "close": "Fermer",
-    "countdown": {
-      "days": "Jours",
-      "hours": "Heures",
-      "minutes": "Minutes",
-      "seconds": "Secondes"
-    },
-    "sort": {
-      "label": "Trier par",
-      "placeholder": "Par défaut",
-      "alphabetical_asc": "Alphabétique A-Z",
-      "alphabetical_desc": "Alphabétique Z-A",
-      "oldest": "Plus ancien",
-      "newest": "Plus récent",
-      "price_low_high": "Prix : croissant",
-      "price_high_low": "Prix : décroissant"
-    }
+    "show_more": "Voir plus"
   },
   "navigation": {
     "home": "Accueil",
@@ -65,12 +40,8 @@
     }
   },
   "order": {
-    "title": "Merci pour votre commande !",
-    "description": "Votre commande a bien été enregistrée et est en cours de traitement",
     "order_summary": "Récapitulatif de la Commande",
-    "your_order": "Votre commande",
     "status": {
-      "label": "Statut",
       "paid": "Payé",
       "unpaid": "Non payé",
       "captured": "Encaissé",
@@ -105,76 +76,26 @@
     }
   },
   "search": {
-    "all_products": "Tous les produits",
-    "heading": "Résultats pour",
     "empty": {
       "title": "Aucun résultat trouvé",
       "description": ""
+    },
+    "drawer": {
+      "placeholder": "Rechercher des produits..",
+      "action": "Recherche"
     }
-  },
-  "testimonials": {
-    "empty": {
-      "title": "Aucun avis disponible",
-      "description": ""
-    }
-  },
-  "pagination": {
-    "page": "Page",
-    "next": "Suivant",
-    "previous": "Précédent"
   },
   "product": {
+    "title": "Mon produit",
     "inventory_in_stock": "En stock",
     "inventory_in_stock_show_count": "% en stock",
     "inventory_low_stock": "Stock faible",
     "inventory_low_stock_show_count": "Stock faible: % restant",
     "inventory_out_of_stock": "En rupture de stock",
-    "buy_button": {
-      "buy_now": "Acheter maintenant",
-      "express_checkout": {
-        "title": "Remplis ce formulaire, et on te recontacte rapidement",
-        "subtitle": "Informations client",
-        "place_order": "Passer la commande"
-      }
-    },
-    "reviews": {
-      "ratings": "Notes",
-      "write_review": "Écrire un avis",
-      "fields": {
-        "rating": {
-          "label": "Votre expérience vous a-t-elle satisfait(e) ?"
-        },
-        "first_name": {
-          "label": "Prénom",
-          "placeholder": "Tapez votre prénom.."
-        },
-        "last_name": {
-          "label": "Nom",
-          "placeholder": "Tapez votre nom.."
-        },
-        "email": {
-          "label": "Email",
-          "placeholder": "Tapez votre email.."
-        },
-        "review": {
-          "label": "Avis",
-          "placeholder": "Tapez votre texte ici.."
-        },
-        "upload_image": {
-          "label": "Ajouter des images",
-          "placeholder": "Taille maximale du fichier 2 Mo"
-        }
-      },
-      "actions": {
-        "cancel": "Annuler",
-        "submit": "Soumettre"
-      }
-    },
     "upload_image": {
       "label": "Cliquez ici pour choisir une image",
       "accept": "JPG, JPEG, PNG, GIF et WEBP. Taille maximale : 2 Mo."
-    },
-    "anonymous": "Anonyme"
+    }
   },
   "upsell": {
     "offer_title": "Acceptez-vous cette offre ?"
@@ -194,9 +115,6 @@
     "insufficient_inventory": "Seulement [inventory] articles disponibles en stock",
     "rating_is_required": "Veuillez évaluer le produit",
     "large_file": "[file] dépasse 2 Mo"
-  },
-  "success_messages": {
-    "review_submitted": "Avis reçu, merci pour votre partage !"
   },
   "header": {
     "menu": {
@@ -219,16 +137,19 @@
   "accessibility": {
     "skip_to_content": "Aller au contenu"
   },
-  "socials": {
-    "facebook": "Facebook",
-    "instagram": "Instagram",
-    "whatsapp": "WhatsApp",
-    "snapchat": "Snapchat",
-    "tiktok": "TikTok",
-    "x": "X (Twitter)"
+  "example": {
+    "templates": "Mes modèles",
+    "products": "Mes produits"
   },
-  "whatsapp": {
-    "title": "Besoin d’aide ? Discutez avec nous",
-    "subtitle": "Service client"
+  "templates": {
+    "index": "Accueil",
+    "product": "Produit",
+    "list-collections": "List des collections",
+    "collection": "Collections",
+    "search": "Recherche",
+    "cart": "Panier",
+    "thankyou": "Page de remerciement",
+    "page": "Page",
+    "upsell": "Vente incitative"
   }
 }

@@ -24,7 +24,9 @@
   </button>
   <div ui-slot="sheet-content" id="cart" popover>
     <div ui-slot="sheet-header">
-      <h2 ui-slot="sheet-title">My Cart</h2>
+      <h2 ui-slot="sheet-title">
+        {{ 'cart.drawer.title' | t }}
+      </h2>
     </div>
     <div ui-slot="sheet-body">
       {% render 'core.cart-form' %}
@@ -41,9 +43,11 @@
     </div>
     <div ui-slot="sheet-footer">
       <button ui-slot="button" data-variant="neutral" data-mode="stroke" data-size="lg" popovertarget="cart">
-        Continue Shopping
+        {{ 'cart.drawer.actions.continue_shopping' | t }}
       </button>
-      <a href="/cart" ui-slot="button" data-variant="primary" data-mode="filled" data-size="lg">Go to Cart</a>
+      <a href="/cart" ui-slot="button" data-variant="primary" data-mode="filled" data-size="lg">
+        {{ 'cart.drawer.actions.go_to_cart' | t }}
+      </a>
     </div>
   </div>
 </div>

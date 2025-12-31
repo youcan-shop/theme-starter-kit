@@ -9,21 +9,21 @@
   <nav ui-slot="breadcrumb" data-separator="arrow" aria-label="Breadcrumb" style="margin-block-end: 32px;">
     <ol ui-slot="breadcrumb-group">
       <li ui-slot="breadcrumb-item">
-        <a href="/"> Home </a>
+        <a href="/"> {{ 'navigation.home' | t }} </a>
       </li>
       {% unless category %}
         <li ui-slot="breadcrumb-item">
           <a href="/" aria-current="page">
-            {{ template.name | capitalize }}
+            {{ 'templates.' | append: template.name | t }}
           </a>
         </li>
       {% endunless %}
       {% if category %}
         <li ui-slot="breadcrumb-item">
-          <a href="/collections"> Collections </a>
+          <a href="/collections"> {{ 'navigation.collections' | t }} </a>
         </li>
         <li ui-slot="breadcrumb-item">
-          <a href="/" aria-current="page"> {{ category.name | capitalize }} </a>
+          <a href="/" aria-current="page"> {{ category.name }} </a>
         </li>
       {% endif %}
     </ol>

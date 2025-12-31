@@ -1,7 +1,7 @@
 {{ 'section.footer.css' | asset_url | stylesheet_tag }}
 
 <div ui-layout="footer">
-  © Made By
+  {{ 'footer.copyright.title' | t }}
   <a
     ui-slot="link-button"
     data-variant="black"
@@ -11,13 +11,14 @@
     target="_blank"
     rel="noopener noreferrer"
   >
-    YouCan
+    {{ 'footer.copyright.platform' | t }}
   </a>
 </div>
 {% schema %}
 {
   "label": "Footer",
   "tag": "footer",
+  "limit": 1,
   "settings": []
 }
 {% endschema %}

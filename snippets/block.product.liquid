@@ -40,7 +40,8 @@
   <div class="content">
     <div class="info">
       <a ui-slot="link-button" data-variant="black" data-size="md" class="title" href="{{ product.url }}">
-        {{- product.name | default: 'My product' -}}
+        {% assign placeholder = 'product.title' | t %}
+        {{ product.name | default: placeholder }}
       </a>
       <div class="price">
         <span class="original-price">

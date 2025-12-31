@@ -57,7 +57,7 @@ if (!customElements.get("ui-shop-button")) {
 
       if (label) {
         label.textContent = this.hasAttribute("not-available")
-          ? "Out of stoke"
+          ? window.actions.out_of_stock
           : this.buyButtonLabel;
       }
     }
