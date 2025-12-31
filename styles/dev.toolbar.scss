@@ -1,4 +1,39 @@
 ui-dev-toolbar {
+  [data-dev-toolbar="highlight"] {
+    position: fixed;
+    padding: var(--spacing-4);
+    transition: var(--transition-standard-fast-spatial);
+    border: 1px dashed currentcolor;
+    background-color: color-mix(in srgb, currentcolor 15%, transparent);
+    color: var(--color-primary);
+    pointer-events: none;
+
+    > div {
+      display: flex;
+      position: fixed;
+      align-items: center;
+      width: fit-content;
+      padding: var(--spacing-2) var(--spacing-8);
+      transition: var(--transition-standard-fast-spatial);
+      border: 1px dashed currentcolor;
+      background-color: var(--color-primary-container);
+      color: inherit;
+      font: var(--font-body-sm);
+      font-weight: 500;
+      gap: var(--spacing-4);
+    }
+  }
+
+  &[is-global] {
+    [data-dev-toolbar="highlight"][data-liquid-element="true"] {
+      color: var(--color-error);
+
+      > div {
+        background-color: var(--color-error-container);
+      }
+    }
+  }
+
   .toolbar {
     position: fixed;
     bottom: var(--spacing-24);
@@ -11,7 +46,120 @@ ui-dev-toolbar {
     }
   }
 
-  [ui-slot="modal-content"] {
+  [ui-slot="modal-content"]#structure {
+    [ui-slot="modal-body"] {
+      max-height: 400px;
+      overflow: auto;
+
+      .tree {
+        display: grid;
+
+        .section {
+          display: flex;
+          gap: var(--spacing-6);
+          margin-block-end: var(--spacing-12);
+
+          [ui-slot="button"] {
+            &:last-child {
+              justify-content: flex-start;
+              width: 100%;
+
+              > i {
+                color: var(--color-primary);
+                font-size: 16px;
+              }
+            }
+
+            &:first-child {
+              position: relative;
+
+              & > i {
+                transition: var(--transition-standard-fast-spatial);
+              }
+
+              & > input[type="checkbox"] {
+                position: absolute;
+                scale: 0;
+                opacity: 0;
+
+                &:checked + i {
+                  rotate: 90deg;
+                }
+              }
+            }
+          }
+
+          &:has(input[type="checkbox"]:checked) {
+            + .blocks-wrapper {
+              grid-template-rows: 1fr !important;
+
+              &:not(:last-child) {
+                margin-block-end: var(--spacing-12);
+              }
+            }
+          }
+
+          &:has(+ :is(.section)),
+          &:last-child {
+            [ui-slot="button"]:first-child {
+              visibility: hidden;
+            }
+          }
+        }
+
+        .blocks-wrapper {
+          display: grid;
+          grid-template-rows: 0fr;
+          transition: var(--transition-standard-fast-spatial);
+
+          .blocks {
+            display: grid;
+            position: relative;
+            margin-inline-start: 38px;
+            padding-inline-start: 20px;
+            gap: var(--spacing-6);
+            overflow: hidden;
+
+            &::before {
+              content: "";
+              position: absolute;
+              width: 1px;
+              height: 76%;
+              background-color: var(--color-surface-variant);
+              inset: 0;
+            }
+
+            .block {
+              position: relative;
+
+              [ui-slot="button"] {
+                justify-content: flex-start;
+                width: 100%;
+
+                > i {
+                  color: var(--color-primary);
+                  font-size: 16px;
+                }
+              }
+
+              &:last-child::before {
+                content: "";
+                position: absolute;
+                top: 35%;
+                left: -21px;
+                width: 23px;
+                height: 1px;
+                transform: translateY(-50%) rotate(25deg);
+                background-color: var(--color-surface-variant);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  [ui-slot="modal-content"]#settings {
     [ui-slot="modal-body"] {
       display: grid;
       gap: var(--spacing-16);
