@@ -48,7 +48,9 @@
             ></textarea>
           {% when 'select' %}
             <ui-select ui-slot="select" data-size="lg">
-              <button ui-slot="select-trigger" popovertarget="{{ field_name }}" type="button">Select</button>
+              <button ui-slot="select-trigger" popovertarget="{{ field_name }}" type="button">
+                {{ 'general.select' | t }}
+              </button>
 
               <div ui-slot="select-content" id="{{ field_name }}" popover>
                 {% for opt in field.options %}

@@ -2,8 +2,10 @@
   "general": {
     "shop_now": "تسوّق الآن",
     "add_to_cart": "أضف إلى السلة",
+    "place_order": "اطلب الآن",
     "out_of_stock": "نفذ من المخزون",
-    "show_more": "عرض المزيد"
+    "show_more": "عرض المزيد",
+    "select": "اختر"
   },
   "navigation": {
     "home": "الرئيسية",
@@ -94,7 +96,8 @@
     "inventory_out_of_stock": "نفذ من المخزون",
     "upload_image": {
       "label": "اضغط هنا لاختيار صورة",
-      "accept": "JPG، JPEG، PNG، GIF وWEBP. الحجم الأقصى: 2 ميجابايت."
+      "accept": "JPG، JPEG، PNG، GIF وWEBP. الحجم الأقصى: 2 ميجابايت.",
+      "trigger": "تصفح الملف"
     }
   },
   "upsell": {

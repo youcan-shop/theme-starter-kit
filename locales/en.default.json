@@ -2,8 +2,10 @@
   "general": {
     "shop_now": "Shop now",
     "add_to_cart": "Add to cart",
+    "place_order": "Place order",
     "out_of_stock": "Out of stock",
-    "show_more": "Show more"
+    "show_more": "Show more",
+    "select": "Select"
   },
   "navigation": {
     "home": "Home",
@@ -94,7 +96,8 @@
     "inventory_out_of_stock": "Out of stock",
     "upload_image": {
       "label": "Click here to choose image",
-      "accept": "JPG, JPEG, PNG, GIF and WEBP. Max 2MB."
+      "accept": "JPG, JPEG, PNG, GIF and WEBP. Max 2MB.",
+      "trigger": "Browse File"
     }
   },
   "upsell": {

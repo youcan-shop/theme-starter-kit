@@ -2,8 +2,10 @@
   "general": {
     "shop_now": "Commander maintenant",
     "add_to_cart": "Ajouter au panier",
+    "place_order": "Passer la commande",
     "out_of_stock": "En rupture de stock",
-    "show_more": "Voir plus"
+    "show_more": "Voir plus",
+    "select": "Sélectionner"
   },
   "navigation": {
     "home": "Accueil",
@@ -94,7 +96,8 @@
     "inventory_out_of_stock": "En rupture de stock",
     "upload_image": {
       "label": "Cliquez ici pour choisir une image",
-      "accept": "JPG, JPEG, PNG, GIF et WEBP. Taille maximale : 2 Mo."
+      "accept": "JPG, JPEG, PNG, GIF et WEBP. Taille maximale : 2 Mo.",
+      "trigger": "Parcourir le fichier"
     }
   },
   "upsell": {
