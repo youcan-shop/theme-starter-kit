@@ -6,7 +6,6 @@
     display: grid;
     gap: var(--spacing-64);
     grid-template-columns: 60% auto;
-    margin: var(--spacing-64);
 
     ui-cart-items {
       display: grid;
@@ -114,6 +113,10 @@
             color: var(--color-on-surface);
             font: var(--font-body-lg);
             border-block-start: 1px dashed var(--color-surface-variant);
+
+            .value {
+              color: var(--color-primary);
+            }
           }
 
           &:has([ui-summary-box][hidden]) {
@@ -147,7 +150,6 @@
   [ui-section="cart"] {
     .cart-core {
       grid-template-columns: 1fr;
-      margin: var(--spacing-0);
       gap: var(--spacing-12);
 
       ui-cart-items {

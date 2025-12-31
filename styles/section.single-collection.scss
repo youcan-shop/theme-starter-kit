@@ -1,6 +1,7 @@
 [ui-section="single-collection"] {
   display: flex;
   gap: var(--spacing-24);
+  justify-content: center;
 
   .list {
     display: grid;
