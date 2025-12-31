@@ -1,0 +1,62 @@
+{{ 'section.example.css' | asset_url | stylesheet_tag }}
+
+<div ui-section="example">
+  <div class="head">
+    <h3 class="title">My Templates</h3>
+  </div>
+  <ul class="pages">
+    <li>
+      <a ui-slot="button" data-variant="neutral" data-mode="stroke" data-size="sm" href="/">Index</a>
+    </li>
+    <li>
+      <a ui-slot="button" data-variant="neutral" data-mode="stroke" data-size="sm" href="/products/product-1">
+        Product
+      </a>
+    </li>
+    <li>
+      <a ui-slot="button" data-variant="neutral" data-mode="stroke" data-size="sm" href="/collections">
+        All Collections
+      </a>
+    </li>
+    <li>
+      <a ui-slot="button" data-variant="neutral" data-mode="stroke" data-size="sm" href="/collections/">
+        Single Collection
+      </a>
+    </li>
+    <li>
+      <a ui-slot="button" data-variant="neutral" data-mode="stroke" data-size="sm" href="/search">Search</a>
+    </li>
+    <li>
+      <a ui-slot="button" data-variant="neutral" data-mode="stroke" data-size="sm" href="/cart">Cart</a>
+    </li>
+    <li>
+      <a
+        ui-slot="button"
+        data-variant="neutral"
+        data-mode="stroke"
+        data-size="sm"
+        href="/orders/8e8427fa-2ca1-489a-8833-a6bd9429b686"
+      >
+        Thank You
+      </a>
+    </li>
+    <li>
+      <a ui-slot="button" data-variant="neutral" data-mode="stroke" data-size="sm" href="/pages/return-policy">Page</a>
+    </li>
+  </ul>
+  <div class="head">
+    <h3 class="title">My Products</h3>
+  </div>
+  <ul class="list">
+    {% for product in (1..4) %}
+      {% render 'block.product', product: product %}
+    {% endfor %}
+  </ul>
+</div>
+
+{% schema %}
+{
+  "label": "Example",
+  "settings": []
+}
+{% endschema %}
