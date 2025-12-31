@@ -34,6 +34,7 @@
 {{ '_global.js' | asset_url | script_tag_deferred }}
 {{ '_pubsub.js' | asset_url | script_tag_deferred }}
 {{ '_cart.js' | asset_url | script_tag_deferred }}
+{{ 'misc.select.js' | asset_url | script_tag_deferred }}
 {{ 'core.quantity.css' | asset_url | stylesheet_tag }}
 
 {% if template.name != 'cart' and template.name != 'thankyou' and template.name != 'page' %}

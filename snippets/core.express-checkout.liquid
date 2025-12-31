@@ -47,7 +47,7 @@
               {% endif %}
             ></textarea>
           {% when 'select' %}
-            <div ui-slot="select" data-size="lg">
+            <ui-select ui-slot="select" data-size="lg">
               <button ui-slot="select-trigger" popovertarget="{{ field_name }}" type="button">Select</button>
 
               <div ui-slot="select-content" id="{{ field_name }}" popover>
@@ -67,7 +67,7 @@
                   </button>
                 {% endfor %}
               </div>
-            </div>
+            </ui-select>
         {% endcase %}
       </label>
     {% endunless %}

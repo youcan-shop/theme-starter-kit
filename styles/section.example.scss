@@ -18,6 +18,7 @@
   .pages {
     display: flex;
     gap: var(--spacing-12);
+    flex-wrap: wrap;
   }
 }
 

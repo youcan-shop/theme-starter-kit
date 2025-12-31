@@ -105,10 +105,10 @@
       </fieldset>
       <fieldset>
         <label ui-slot="label" for="font">Front Family</label>
-        <div ui-slot="select" data-size="sm">
+        <ui-select ui-slot="select" data-size="sm">
           <button ui-slot="select-trigger" popovertarget="font">Select a font</button>
 
-          <div ui-slot="select-content" id="lang" popover>
+          <div ui-slot="select-content" id="font" popover>
             <button ui-slot="select-option" popovertarget="font">
               <label>
                 <input type="radio" name="font-family" value="en">
@@ -128,11 +128,11 @@
               </label>
             </button>
           </div>
-        </div>
+        </ui-select>
       </fieldset>
       <fieldset>
         <label ui-slot="label" for="language">Langues</label>
-        <div ui-slot="select" data-size="sm">
+        <ui-select ui-slot="select" data-size="sm">
           <button ui-slot="select-trigger" popovertarget="lang">Select a language</button>
 
           <div ui-slot="select-content" id="lang" popover>
@@ -155,7 +155,7 @@
               </label>
             </button>
           </div>
-        </div>
+        </ui-select>
       </fieldset>
       <fieldset>
         <label ui-slot="label">Brand Color</label>

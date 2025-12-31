@@ -39,16 +39,22 @@ class LinkedFields extends HTMLElement {
       const label = typeof opt === "string" ? opt : opt.name;
       const value = typeof opt === "string" ? opt : opt.code;
 
-      const option = `
-        <button ui-slot="select-option" popovertarget="${type}" type="button">
-          <label>
-            <input type="radio" name="${type}" value="${value}" ${isDefault[type] ? "checked" : ""}  />
-            ${label}
-          </label>
-        </button>`;
+      const option = document.createElement("button");
+      option.setAttribute("ui-slot", "select-option");
+      option.setAttribute("popovertarget", type);
+      option.setAttribute("type", "button");
 
-      select.innerHTML += option;
+      option.innerHTML = `
+        <label>
+          <input type="radio" name="${type}" value="${label}" ${isDefault[type] ? "checked" : ""}  />
+          ${label}
+        </label>`;
+
+      option.addEventListener("click", () => this.onChange(value, type));
+      select.appendChild(option);
     });
+
+    select.parentElement.findSelectedElement();
   }
 
   async onChange(value, type) {
@@ -108,9 +114,8 @@ class LinkedFields extends HTMLElement {
   }
 
   setIsLoading(type, is_loading) {
-    is_loading
-      ? this.querySelector(`[popover]#${type}`).setAttribute("disabled", true)
-      : this.querySelector(`[popover]#${type}`).removeAttribute("disabled");
+    this.querySelector(`[popover]#${type}`).previousElementSibling.disabled =
+      is_loading;
   }
 }
 
