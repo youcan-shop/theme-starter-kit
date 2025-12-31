@@ -1,0 +1,21 @@
+ui-upsell {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-24);
+}
+ui-upsell .head {
+  display: grid;
+  gap: var(--spacing-12);
+}
+ui-upsell .head .title {
+  font: var(--font-title-lg);
+}
+ui-upsell .head .options {
+  display: flex;
+  gap: var(--spacing-8);
+}
+ui-upsell .head .options [ui-slot=button] {
+  width: 150px;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy50ZW1wL3NlY3Rpb24udXBzZWxsLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSIsImZpbGUiOiJzZWN0aW9uLnVwc2VsbC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJ1aS11cHNlbGwge1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICBnYXA6IHZhcigtLXNwYWNpbmctMjQpO1xufVxudWktdXBzZWxsIC5oZWFkIHtcbiAgZGlzcGxheTogZ3JpZDtcbiAgZ2FwOiB2YXIoLS1zcGFjaW5nLTEyKTtcbn1cbnVpLXVwc2VsbCAuaGVhZCAudGl0bGUge1xuICBmb250OiB2YXIoLS1mb250LXRpdGxlLWxnKTtcbn1cbnVpLXVwc2VsbCAuaGVhZCAub3B0aW9ucyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGdhcDogdmFyKC0tc3BhY2luZy04KTtcbn1cbnVpLXVwc2VsbCAuaGVhZCAub3B0aW9ucyBbdWktc2xvdD1idXR0b25dIHtcbiAgd2lkdGg6IDE1MHB4O1xufVxuIl19 */
