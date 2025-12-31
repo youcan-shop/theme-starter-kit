@@ -298,11 +298,11 @@ class CartItems extends BaseCartItem {
 
   additionalItemUpdates(elements, item) {
     if (elements.subtotal) {
-      this.updateItemSubprice(elements.subtotal, item.quantity, item.price);
+      this.updateItemSubPrice(elements.subtotal, item.quantity, item.price);
     }
   }
 
-  updateItemSubprice(subPriceElement, quantity, basePrice) {
+  updateItemSubPrice(subPriceElement, quantity, basePrice) {
     subPriceElement.textContent = formatCurrency(quantity * basePrice);
   }
 
@@ -322,7 +322,7 @@ class CartRemove extends HTMLElement {
   constructor() {
     super();
 
-    this.button = this.querySelector("button");
+    this.button = this.querySelector('[ui-slot="button"]');
   }
 
   connectedCallback() {

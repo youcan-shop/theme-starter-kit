@@ -15,6 +15,7 @@
   [ui-slot="modal-content"][popover] {
     display: flex;
     visibility: hidden;
+    inset: auto;
     left: 50%;
     flex-direction: column;
     width: calc(100% - var(--spacing-32));

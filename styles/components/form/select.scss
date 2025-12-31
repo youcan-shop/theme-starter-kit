@@ -65,6 +65,10 @@
       transition: var(--transition-standard-default-spatial);
     }
 
+    &:dir(rtl)::after {
+      transform: translate(-1.5px, -1.5px) rotate(-45deg);
+    }
+
     /* Focus */
     &:focus-within {
       border-color: currentcolor;
@@ -93,8 +97,14 @@
   }
 
   &:has([ui-slot="select-content"]:popover-open) {
-    [ui-slot="select-trigger"]::after {
-      transform: translate(-1.5px, 1.5px) rotate(-135deg);
+    [ui-slot="select-trigger"] {
+      &::after {
+        transform: translate(-1.5px, 1.5px) rotate(-135deg);
+      }
+
+      &:dir(rtl)::after {
+        transform: translate(-1.5px, 1.5px) rotate(135deg);
+      }
     }
   }
 
@@ -153,8 +163,12 @@
             height: 10px;
             inset-inline-end: var(--spacing-8);
             transform: translate(-1.5px, -1.5px) rotate(45deg);
-            border-inline-end: 1.2px solid var(--color-on-surface-variant);
-            border-block-end: 1.2px solid var(--color-on-surface-variant);
+            border-right: 1.2px solid var(--color-on-surface-variant);
+            border-bottom: 1.2px solid var(--color-on-surface-variant);
+          }
+
+          &:dir(rtl)::after {
+            transform: translate(4px, -1.5px) rotate(45deg);
           }
         }
 
@@ -178,6 +192,7 @@
       transform: translateY(var(--spacing-6)) scale(1);
       opacity: 1;
       filter: blur(0);
+      inset: auto;
 
       @starting-style {
         visibility: hidden;

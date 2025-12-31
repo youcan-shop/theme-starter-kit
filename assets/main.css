@@ -2507,6 +2507,7 @@
 [ui-slot=modal] [ui-slot=modal-content][popover] {
   display: flex;
   visibility: hidden;
+  inset: auto;
   left: 50%;
   flex-direction: column;
   width: calc(100% - var(--spacing-32));
@@ -3382,6 +3383,9 @@
   border-block-end: 1.2px solid color-mix(in srgb, var(--color-on-surface) 38%, transparent);
   transition: var(--transition-standard-default-spatial);
 }
+[ui-slot*=select] [ui-slot=select-trigger]:dir(rtl)::after {
+  transform: translate(-1.5px, -1.5px) rotate(-45deg);
+}
 [ui-slot*=select] [ui-slot=select-trigger] {
   /* Focus */
 }
@@ -3412,6 +3416,9 @@
 }
 [ui-slot*=select]:has([ui-slot=select-content]:popover-open) [ui-slot=select-trigger]::after {
   transform: translate(-1.5px, 1.5px) rotate(-135deg);
+}
+[ui-slot*=select]:has([ui-slot=select-content]:popover-open) [ui-slot=select-trigger]:dir(rtl)::after {
+  transform: translate(-1.5px, 1.5px) rotate(135deg);
 }
 [ui-slot*=select] {
   /* Content */
@@ -3470,8 +3477,11 @@
   height: 10px;
   inset-inline-end: var(--spacing-8);
   transform: translate(-1.5px, -1.5px) rotate(45deg);
-  border-inline-end: 1.2px solid var(--color-on-surface-variant);
-  border-block-end: 1.2px solid var(--color-on-surface-variant);
+  border-right: 1.2px solid var(--color-on-surface-variant);
+  border-bottom: 1.2px solid var(--color-on-surface-variant);
+}
+[ui-slot*=select] [ui-slot=select-content][popover] [ui-slot=select-option] > label:has(> input[type=radio]:checked):dir(rtl)::after {
+  transform: translate(4px, -1.5px) rotate(45deg);
 }
 [ui-slot*=select] [ui-slot=select-content][popover] [ui-slot=select-option] > label:hover {
   background-color: var(--color-surface-container);
@@ -3490,6 +3500,7 @@
   transform: translateY(var(--spacing-6)) scale(1);
   opacity: 1;
   filter: blur(0);
+  inset: auto;
 }
 @starting-style {
   [ui-slot*=select] [ui-slot=select-content][popover]:popover-open {

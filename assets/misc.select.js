@@ -37,7 +37,6 @@ if (!customElements.get("ui-select")) {
 
     updatePosition() {
       const rect = this.trigger.getBoundingClientRect();
-      console.log(rect);
 
       Object.assign(this.content.style, {
         left: `${rect.left}px`,
