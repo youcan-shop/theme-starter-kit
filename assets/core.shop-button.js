@@ -110,7 +110,6 @@ if (!customElements.get("ui-shop-button")) {
     }
 
     async placeOrder(productVariantId, attachedImage, quantity) {
-      console.log(this.form);
       const formData = new FormData(this.form);
       const fields = Object.fromEntries(formData);
 
