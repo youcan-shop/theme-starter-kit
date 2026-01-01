@@ -26,6 +26,7 @@
     border: none;
     border-radius: var(--radius-lg-inc) var(--radius-lg-inc) 0 0;
     background-color: var(--color-background);
+    color: var(--color-on-background);
 
     &::before {
       content: "";
