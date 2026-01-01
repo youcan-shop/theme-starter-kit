@@ -19,14 +19,16 @@ if (!customElements.get("ui-dev-toolbar")) {
     }
 
     _render() {
+      this.setTheme();
+      this.getStructureTree();
+      this.onThemeChange();
+
       this.highlightTrigger.addEventListener("click", () =>
         this.toggleHighlight()
       );
 
       document.addEventListener("mousemove", this.onMouseMove.bind(this));
       document.addEventListener("click", this.onDocumentClick.bind(this));
-
-      this.getStructureTree();
     }
 
     toggleHighlight() {
@@ -173,6 +175,21 @@ if (!customElements.get("ui-dev-toolbar")) {
           });
         }
       });
+    }
+
+    onThemeChange() {
+      const themes = this.querySelectorAll('input[name="theme"]');
+
+      themes.forEach((option) => {
+        option.checked =
+          (localStorage.getItem("theme") || "light") == option.value;
+        option.addEventListener("change", () => this.setTheme(option.value));
+      });
+    }
+
+    setTheme(theme = localStorage.getItem("theme") || "light") {
+      document.documentElement.setAttribute("data-theme", theme);
+      localStorage.setItem("theme", theme);
     }
   }
 

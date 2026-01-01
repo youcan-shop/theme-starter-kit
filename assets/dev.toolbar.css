@@ -134,6 +134,24 @@ ui-dev-toolbar [ui-slot=modal-content]#settings [ui-slot=modal-body] fieldset {
 ui-dev-toolbar [ui-slot=modal-content]#settings [ui-slot=modal-body] fieldset [ui-slot=label] {
   color: var(--color-on-surface-variant);
 }
+ui-dev-toolbar [ui-slot=modal-content]#settings [ui-slot=modal-body] fieldset .brand-color {
+  justify-content: flex-start;
+}
+ui-dev-toolbar [ui-slot=modal-content]#settings [ui-slot=modal-body] fieldset .brand-color > input[type=color] {
+  width: 20px;
+  height: 20px;
+  margin-inline: calc(var(--spacing-4) * -1);
+  border: none;
+  border-radius: var(--radius-xs);
+  appearance: none;
+}
+ui-dev-toolbar [ui-slot=modal-content]#settings [ui-slot=modal-body] fieldset .brand-color > input[type=color]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+ui-dev-toolbar [ui-slot=modal-content]#settings [ui-slot=modal-body] fieldset .brand-color > input[type=color]::-webkit-color-swatch {
+  border: none;
+  outline: none;
+}
 ui-dev-toolbar [ui-slot=modal-content]#settings [ui-slot=modal-body] fieldset .theme-options {
   display: flex;
   gap: var(--spacing-12);
@@ -183,33 +201,4 @@ ui-dev-toolbar [ui-slot=modal-content]#settings [ui-slot=modal-body] fieldset .t
 }
 ui-dev-toolbar [ui-slot=modal-content]#settings [ui-slot=modal-body] fieldset .theme-options .theme:has(input[type=radio]:checked) .icon {
   border-color: var(--color-on-surface);
-}
-ui-dev-toolbar [ui-slot=modal-content]#settings [ui-slot=modal-body] fieldset .color-options {
-  display: flex;
-  gap: var(--spacing-12);
-}
-ui-dev-toolbar [ui-slot=modal-content]#settings [ui-slot=modal-body] fieldset .color-options .color > input[type=radio] {
-  width: 16px;
-  height: 16px;
-  border-radius: var(--radius-rounded);
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  background-color: currentcolor;
-  appearance: none;
-  cursor: pointer;
-}
-ui-dev-toolbar [ui-slot=modal-content]#settings [ui-slot=modal-body] fieldset .color-options .color > input[type=radio]:checked {
-  outline-color: currentcolor;
-}
-ui-dev-toolbar [ui-slot=modal-content]#settings [ui-slot=modal-body] fieldset .color-options .color > input[type=radio][value=green] {
-  color: var(--color-success);
-}
-ui-dev-toolbar [ui-slot=modal-content]#settings [ui-slot=modal-body] fieldset .color-options .color > input[type=radio][value=blue] {
-  color: var(--color-info);
-}
-ui-dev-toolbar [ui-slot=modal-content]#settings [ui-slot=modal-body] fieldset .color-options .color > input[type=radio][value=orange] {
-  color: var(--color-warning);
-}
-ui-dev-toolbar [ui-slot=modal-content]#settings [ui-slot=modal-body] fieldset .color-options .color > input[type=radio][value=red] {
-  color: var(--color-error);
 }
