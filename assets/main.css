@@ -24,7 +24,7 @@
   --radius-xxl: 48px;
   --radius-rounded: 999px;
   --radius-circled: 50%;
-  --font-family: "DM Sans", sans-serif;
+  --font-family: "DM Sans", "Almarai", sans-serif;
   --font-display-lg: 400 57px/64px var(--font-family);
   --font-display-md: 400 45px/52px var(--font-family);
   --font-display-sm: 400 36px/44px var(--font-family);
