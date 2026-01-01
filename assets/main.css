@@ -4156,6 +4156,10 @@ body:has([popover]:popover-open)::before {
   inset: 0;
 }
 
+fieldset {
+  border: none;
+}
+
 ul {
   list-style: none;
 }

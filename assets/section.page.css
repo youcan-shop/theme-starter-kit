@@ -1,0 +1,20 @@
+[ui-section=page] [ui-slot=alert] {
+  width: fit-content;
+}
+[ui-section=page] > form {
+  display: grid;
+  gap: var(--spacing-24);
+}
+@media (width >= 769px) {
+  [ui-section=page] > form {
+    width: 50%;
+  }
+}
+[ui-section=page] > form .fields {
+  display: grid;
+  gap: var(--spacing-12);
+}
+[ui-section=page] > form .fields fieldset {
+  display: grid;
+  gap: var(--spacing-8);
+}
