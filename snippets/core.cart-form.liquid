@@ -2,11 +2,11 @@
 
 <ui-cart-form>
   <template ui-cart-drawer="item">
-    {% render 'misc.cart-form-item', product: product %}
+    {% render 'core.cart-form-item', product: product %}
   </template>
   <ui-cart-drawer-items>
     {% for product in cart.items %}
-      {% render 'misc.cart-form-item', product: product %}
+      {% render 'core.cart-form-item', product: product %}
     {% endfor %}
   </ui-cart-drawer-items>
   {% assign empty_cart_content = 'cart.empty.title' | t %}
