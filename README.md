@@ -4,14 +4,14 @@
 
 ## Introduction
 
-This starter kit provides the core building blocks every theme needs, so you can skip the repetitive setup and focus on design, creativity, and new sections, all using native HTML, CSS, and JS, while still feeling clean.
+This starter kit provides the core building blocks every theme needs, so you can skip the repetitive setup and focus on design, creativity, and new sections. All using native HTML, CSS (SCSS), and JS, while still feeling clean.
 
 ## Usage
 
 1. Clone the repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/youcan-shop/theme-starter-kit
 ```
 
 2. Initialize the starter theme
@@ -52,7 +52,7 @@ pnpm run dev
 ## Snippets
 
 > [!IMPORTANT]
-> Snippets marked with \* are part of the theme core logic and shouldn't be removed (feel free to tweak the visuals). The rest are totally up to you.
+> Snippets marked with `\*` are part of the theme core logic and shouldn't be removed (feel free to tweak the visuals). The rest are totally up to you.
 
 ### Core
 
@@ -99,7 +99,7 @@ pnpm run dev
 
 ## Color System
 
-To simplify theming, we include a CSS only color palette generated from a single primary (brand) color. This approach ensures all generated colors respect accessibility standards, regardless of the chosen base color. It also improves DX by using semantic color tokens (e.g. `primary`, `on-primary`, `primary-container`, `on-primary-container`) instead of numeric shade levels that are rarely all needed. For a better understanding of the system, we recommend checking [Alwan Generator](https://github.com/ibrilBadreddine/alwan-generator).
+To simplify theming, we include a CSS only color palette generated from a single primary (brand) color. This approach guarantees all generated colors respect [accessibility](https://webaim.org/resources/contrastchecker/) standards, regardless of the chosen base color. It also improves DX by using semantic color tokens (e.g. `primary`, `on-primary`, `primary-container`, `on-primary-container`) instead of numeric shade levels that are rarely all needed. For a better understanding of the system, we recommend checking [Alwan Generator](https://github.com/ibrilBadreddine/alwan-generator).
 
 ### Tokens vs Shades
 
@@ -157,7 +157,7 @@ To simplify theming, we include a CSS only color palette generated from a single
 
 ## Components
 
-This project includes a UI component library (Celeste DS) with over 30 reusable components. The components are built primarily with CSS, with minimal JavaScript used only when required for accessibility. Each component is documented, no dependencies, and full control to style things your way.
+This project includes a UI component library ([Celeste](https://github.com/youcan-shop/celeste) DS) with over 30 reusable components. The components are built primarily with CSS + minimal JavaScript used only when required for accessibility. Each component is documented, no dependencies, and full control to style things your way.
 
 > [!NOTE]
 > Don't need a component? Just remove it. You own the code.
