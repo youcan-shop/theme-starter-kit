@@ -52,9 +52,9 @@ pnpm run dev
 ## Snippets
 
 > [!IMPORTANT]
-> Snippets marked with `\*` are part of the theme core logic and shouldn't be removed (feel free to tweak the visuals). The rest are totally up to you.
+> Snippets marked with `*` are part of the theme core logic and shouldn't be removed (feel free to tweak the visuals). The rest are totally up to you.
 
-### Core
+### Core
 
 | Snippet          | Type     | File                                                                  |
 | ---------------- | -------- | --------------------------------------------------------------------- |
@@ -94,8 +94,8 @@ pnpm run dev
 
 | Snippet | Type    | File                                                        |
 | ------- | ------- | ----------------------------------------------------------- |
-| Icon    | `BLOCK` | [block.product.liquid](snippets/block.product.liquid)       |
-| Search  | `BLOCK` | [block.collection.liquid](snippets/block.collection.liquid) |
+| Product    | `BLOCK` | [block.product.liquid](snippets/block.product.liquid)       |
+| Collection  | `BLOCK` | [block.collection.liquid](snippets/block.collection.liquid) |
 
 ## Color System
 
