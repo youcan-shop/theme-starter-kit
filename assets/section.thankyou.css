@@ -6,7 +6,7 @@
 [ui-section=thankyou] .order-summary {
   width: 500px;
   border: 1px solid var(--color-surface-variant);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-12);
   background-color: var(--color-surface-container-low);
 }
 [ui-section=thankyou] .order-summary .summary-head {
@@ -40,7 +40,7 @@
   height: 80px;
   overflow: hidden;
   border: 1px solid var(--color-surface-variant);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-8);
   background-color: var(--color-surface-container);
 }
 [ui-section=thankyou] .order-summary .order-info .product .image img {
@@ -62,6 +62,6 @@
   [ui-section=thankyou] .order-summary {
     width: 100%;
     border-inline: none;
-    border-radius: var(--radius-none);
+    border-radius: var(--radius-0);
   }
 }

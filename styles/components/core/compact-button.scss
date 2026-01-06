@@ -21,7 +21,7 @@
   height: var(--compact-button-size);
   transition: all var(--transition-standard-default-spatial);
   border: 1px solid;
-  border-radius: calc(var(--radius-sm) - var(--spacing-2));
+  border-radius: calc(var(--radius-8) - var(--spacing-2));
   outline: none;
   color: var(--color-on-surface-variant);
   text-decoration: none;
@@ -63,7 +63,7 @@
 
   /* Full Radius */
   &[data-full-radius="true"] {
-    border-radius: var(--radius-circled);
+    border-radius: var(--radius-rounded);
   }
 
   /* Flip Icon In RTL */

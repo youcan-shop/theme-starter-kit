@@ -38,7 +38,7 @@
     [ui-slot="rating-item"] {
       padding-inline: var(--spacing-16);
       border: 1px solid var(--color-surface-variant);
-      border-radius: calc(var(--radius-md) - var(--spacing-2));
+      border-radius: calc(var(--radius-12) - var(--spacing-2));
 
       &:not(:has(> svg)) {
         width: var(--item-size);

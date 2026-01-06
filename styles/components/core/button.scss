@@ -21,7 +21,7 @@
   height: var(--button-size);
   transition: all var(--transition-standard-default-spatial);
   border: 1px solid;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-8);
   outline: none;
   box-shadow: 0 0 0 3px transparent;
   font: var(--font-body-md);
@@ -33,7 +33,7 @@
     --button-size: 40px;
 
     padding-inline: calc(var(--spacing-12) + var(--spacing-2));
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-12);
     gap: var(--spacing-12);
   }
 
@@ -189,7 +189,7 @@
       animation: spin 1s linear infinite;
       border: 1.5px solid
         color-mix(in srgb, var(--color-on-surface) 38%, transparent);
-      border-radius: var(--radius-circled);
+      border-radius: var(--radius-rounded);
       border-inline-end-color: transparent;
     }
   }

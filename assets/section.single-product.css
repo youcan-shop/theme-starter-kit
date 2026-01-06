@@ -7,7 +7,7 @@
   height: 60vh;
   overflow: hidden;
   border: 1px solid var(--color-surface-variant);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-16);
 }
 [ui-section=single-product] .media [ui-slot=carousel] {
   height: 100%;
