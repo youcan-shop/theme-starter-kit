@@ -21,7 +21,7 @@
   --radius-28: 28px;
   --radius-32: 32px;
   --radius-48: 48px;
-  --radius-rounded: 1px * infinity;
+  --radius-rounded: calc(1px * infinity);
   --font-family: "DM Sans", "Almarai", sans-serif;
   --font-display-lg: 400 57px/64px var(--font-family);
   --font-display-md: 400 45px/52px var(--font-family);
