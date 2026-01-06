@@ -33,7 +33,7 @@ ui-variants [ui-variant][ui-variant=textual_buttons] .options .opt {
   padding-inline: var(--spacing-12);
   transition: var(--transition-standard-default-effects);
   border: 1px solid var(--color-surface-variant);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-8);
   cursor: pointer;
 }
 ui-variants [ui-variant][ui-variant=textual_buttons] .options .opt:has(> input[type=radio]:checked) {
@@ -55,7 +55,7 @@ ui-variants [ui-variant][ui-variant=color_base_buttons] .options .opt {
   padding-inline: var(--spacing-12);
   transition: var(--transition-standard-default-effects);
   border: 2px solid white;
-  border-radius: var(--radius-circled);
+  border-radius: var(--radius-rounded);
   background-color: color-mix(in srgb, var(--color-value), black 5%);
   box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
   cursor: pointer;
@@ -89,7 +89,7 @@ ui-variants [ui-variant][ui-variant=image_based_buttons] .options .opt {
   overflow: hidden;
   transition: var(--transition-standard-default-effects);
   border: 2px solid white;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-8);
   background-color: color-mix(in srgb, var(--color-value), black 5%);
   box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
   cursor: pointer;
@@ -109,7 +109,7 @@ ui-variants [ui-variant][ui-variant=image_based_buttons] .options .opt .checked 
 ui-variants [ui-variant][ui-variant=image_based_buttons] .options .opt > img {
   width: 100%;
   height: 100%;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-8);
   object-fit: cover;
 }
 ui-variants [ui-variant][ui-variant=image_based_buttons] .options .opt:has(> input[type=radio]:checked) .checked {

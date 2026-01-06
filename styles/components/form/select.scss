@@ -114,7 +114,7 @@
     padding: var(--spacing-8);
     transition: var(--transition-expressive-fast-spatial);
     border: 1px solid var(--color-surface-variant);
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-16);
     background-color: var(--color-background);
     box-shadow: 0 16px 32px -12px
       color-mix(in srgb, var(--color-on-background) 8%, transparent);
@@ -124,7 +124,7 @@
       width: 100%;
       overflow: hidden;
       border: none;
-      border-radius: var(--radius-sm);
+      border-radius: var(--radius-8);
       background-color: transparent;
 
       & > label {
@@ -209,7 +209,7 @@
       height: 40px;
       gap: var(--spacing-8);
       padding-inline: var(--spacing-12);
-      border-radius: calc(var(--radius-md) - var(--spacing-2));
+      border-radius: calc(var(--radius-12) - var(--spacing-2));
     }
   }
 
@@ -218,7 +218,7 @@
       height: 36px;
       gap: var(--spacing-8);
       padding-inline: var(--spacing-10);
-      border-radius: var(--radius-sm);
+      border-radius: var(--radius-8);
     }
   }
 
@@ -227,7 +227,7 @@
       height: 32px;
       gap: var(--spacing-6);
       padding-inline: var(--spacing-8);
-      border-radius: var(--radius-sm);
+      border-radius: var(--radius-8);
     }
   }
 

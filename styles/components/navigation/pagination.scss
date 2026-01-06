@@ -31,21 +31,21 @@
     gap: var(--spacing-8);
 
     &[data-variant="basic"] {
-      --pagination-border-radius: var(--radius-sm);
+      --pagination-border-radius: var(--radius-8);
     }
 
     &[data-variant="rounded"] {
-      --pagination-border-radius: var(--radius-circled);
+      --pagination-border-radius: var(--radius-rounded);
     }
   }
 
   &[data-variant="group"] {
     --pagination-min-width: 40px;
-    --pagination-border-radius: var(--radius-none);
+    --pagination-border-radius: var(--radius-0);
 
     overflow: hidden;
     border: 1px solid var(--color-surface-variant);
-    border-radius: var(--radius-sm);
+    border-radius: var(--radius-8);
 
     [ui-slot*="pagination-nav"],
     [ui-slot*="pagination-item"],

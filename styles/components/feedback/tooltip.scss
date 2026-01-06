@@ -56,7 +56,7 @@
     [ui-slot="tooltip-content"] {
       height: 20px;
       padding-inline: var(--spacing-6);
-      border-radius: var(--radius-xs);
+      border-radius: var(--radius-4);
       font: var(--font-body-sm);
     }
   }
@@ -65,7 +65,7 @@
     [ui-slot="tooltip-content"] {
       height: 28px;
       padding-inline: var(--spacing-10);
-      border-radius: calc(var(--radius-sm) - var(--spacing-2));
+      border-radius: calc(var(--radius-8) - var(--spacing-2));
       font: var(--font-body-md);
     }
   }
@@ -74,7 +74,7 @@
     [ui-slot="tooltip-content"] {
       padding: var(--spacing-12);
       gap: var(--spacing-12);
-      border-radius: var(--radius-md);
+      border-radius: var(--radius-12);
     }
   }
 

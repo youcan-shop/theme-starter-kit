@@ -7,7 +7,7 @@
   height: 20vh;
   overflow: hidden;
   border: 1px solid var(--color-surface-variant);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-12);
 }
 [ui-block=collection] .media > img {
   object-fit: cover;

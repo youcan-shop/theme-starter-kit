@@ -24,7 +24,7 @@
   display: flex;
   position: relative;
   padding: var(--spacing-4);
-  border-radius: calc(var(--radius-md) - var(--spacing-2));
+  border-radius: calc(var(--radius-12) - var(--spacing-2));
   background-color: var(--color-surface-container);
 
   /* Rounded */
@@ -54,7 +54,7 @@
       calc(var(--active) * (100% + var(--segmented-control-gap)))
     );
     transition: transform var(--transition-expressive-default-spatial);
-    border-radius: calc(var(--radius-sm) - var(--spacing-2));
+    border-radius: calc(var(--radius-8) - var(--spacing-2));
     background-color: var(--color-background);
     box-shadow: 0 2px 4px 0
       color-mix(in srgb, var(--color-on-background) 10%, transparent);

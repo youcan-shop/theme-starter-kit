@@ -102,20 +102,20 @@
     height: auto;
     gap: var(--spacing-12);
     padding: var(--spacing-14);
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-12);
   }
 
   &[data-size="md"] {
     height: 36px;
     padding-inline: var(--spacing-10);
     gap: var(--spacing-8);
-    border-radius: var(--radius-sm);
+    border-radius: var(--radius-8);
   }
 
   &[data-size="sm"] {
     height: 32px;
     padding-inline: var(--spacing-8);
-    border-radius: var(--radius-sm);
+    border-radius: var(--radius-8);
     font: var(--font-body-sm);
     gap: var(--spacing-8);
 

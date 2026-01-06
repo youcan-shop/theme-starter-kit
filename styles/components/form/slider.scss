@@ -26,7 +26,7 @@ input[type="range"] {
   &::-webkit-slider-thumb {
     height: var(--thumb-size);
     transition: inherit;
-    border-radius: var(--radius-circled);
+    border-radius: var(--radius-rounded);
     background-color: var(--color-slider);
     box-shadow: 0 0 0 5px inset var(--color-background);
     aspect-ratio: 1;
